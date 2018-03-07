@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+    <html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>Document</title>
+    </head>
+
+    <body>
+        <label>请输入你的学号：
+            <input id="xh-input" type="text">
+        </label>
+        <button id="btn1" onclick="btnClick()">确认</button>
+        <div>您输入的值是：
+            <span id="xh-display">尚无录入</span>
+        </div>
+        <script type="text/javascript">
+            function btnClick() {
+                    var xh = document.getElementById("xh-input");
+                    //alert(xh.value);
+                    document.getElementById("xh-display").innerHTML=xh.value;
+                }
+        </script>
+    </body>
+
+    </html>
