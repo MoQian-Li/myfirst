@@ -1,0 +1,36 @@
+/*自定义右击菜单*/
+
+.contain {
+    background-color: #D1CEBC;
+    height: 100px;
+    width: 300px;
+}
+
+.menu {
+    width: 150px;
+    background-color: white;
+    visibility: hidden;
+    position: absolute;
+    box-shadow: 0px 0px 10px #D1CEBC
+}
+
+.menu-item {
+    background-color: #fff;
+    margin: 0;
+}
+
+.menu-item-btn {
+    width: 146px;
+    margin: 2px;
+    border: 0;
+    text-align: left;
+    padding-left: 60px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    background-color: #fff;
+    color: #000;
+}
+
+.menu-item-btn:hover {
+    background-color: #D1CEBC;
+}

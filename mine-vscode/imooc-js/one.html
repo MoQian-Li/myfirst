@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>速度动画</title>
+    <style type="text/css">
+        #div1{
+            width: 300px;
+            height: 400px;
+            background-color: blueviolet;
+            position: relative;
+            left: -300px;
+            top: 0;
+        }
+        #div1 span {
+            width: 20px;
+            height: 100px;
+            background-color: green;
+            position: absolute;
+            left: 300px;
+            top: 100px;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <label id="lable1"></label>
+    </div>
+    <div id="div1"><span id="hover">划过</span></div>
+    <script type="text/javascript">
+        window.onload=function(){
+            var divm=document.getElementById("div1");          
+            divm.onmouseover=function(){
+                move(5,0);
+                //startMove();
+            }
+            divm.onmouseout=function(){
+                move(5,-300)
+                //stopMove();
+            }
+            var timer=null;
+            //两个函数相似程度非常大，可以将其合并
+            function move(speed,point){
+                clearInterval(timer);
+                timer=setInterval(function(){
+                    if(point>=0){
+                        if(divm.offsetLeft>=point){
+                            clearInterval(timer);
+                        }else{
+                            divm.style.left=divm.offsetLeft+speed+'px';
+                            document.getElementById("lable1").innerHTML=divm.offsetLeft;
+                        }
+                    }
+                     else{
+                         if(divm.offsetLeft<=point){
+                             clearInterval(timer);
+                         }else{
+                             divm.style.left==divm.offsetLeft-speed+'px';
+                             document.getElementById("lable1").innerHTML=divm.offsetLeft;
+                         }
+                     }
+                },30)//每三十秒执行一次括号中的函数
+            }
+
+ /*           function startMove(){
+                clearInterval(timer);//清除所有定时器防止效果叠加
+                var divm=document.getElementById("div1");
+                //定时器
+               timer= setInterval(function(){
+                    //如果这里的判断是判断为0的时候则会出错，div.offsenLeft似乎没有值为0的时候，原因不详
+                    if(divm.offsetLeft==0){
+                        clearInterval(timer);//关闭定时器
+                    }else{
+                        divm.style.left=divm.offsetLeft+5+'px';//每三十秒移动5个像素
+                        document.getElementById("lable1").innerHTML=divm.offsetLeft;
+                    }
+                },30)
+            } 
+
+            function stopMove(){
+                clearInterval(timer);//清除所有定时器防止效果叠加
+                var divm=document.getElementById("div1");
+                //定时器
+               timer= setInterval(function(){
+                    //如果这里的判断是判断为0的时候则会出错，div.offsenLeft似乎没有值为0的时候，原因不详
+                    if(divm.offsetLeft<=-300){
+                        clearInterval(timer);//关闭定时器
+                    }else{
+                        //alert(divm.offsetLeft);
+                        divm.style.left=divm.offsetLeft-10+'px';//每三十秒移动5个像素
+                        document.getElementById("lable1").innerHTML=divm.offsetLeft;
+                    }
+                },30)
+            }
+            */
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>shopping-list</title>
+</head>
+
+<body>
+    <h1>what to buy</h1>
+    <p title="a gentle reminder">do not forget to by this stuff.</p>
+    <ul id="purchases">
+        <li>a tine of beans</li>
+        <li class="sale">chese</li>
+        <li>milk</li>
+    </ul>
+    <p>this is just a test</p>
+    <script>
+        //alert(document.getElementsByTagName("li").length);//获得元素个数
+
+        // var items = document.getElementsByTagName("li");//遍历获得元素类型
+        // for (var i = 0; i < items.length; i++) {
+        //     alert(typeof items[i]);//显示连续几个对话框
+        // }
+
+        //利用通配符获得文档中的元素个数
+        //alert(document.getElementsByTagName("*").length);
+
+        // var shopping = document.getElementById("purchases");
+        // var items = shopping.getElementsByTagName("*");
+        //至此items数组包含id属性为purchases的无序清单里的元素
+        // alert(items.length);
+        //item数组长度和ul清单中的列表项元素总数相等
+
+        var shopping = document.getElementById("purchases");
+        shopping.setAttribute("title", "a list of goods");
+
+        //获取每个p元素的title属性
+        var paras = document.getElementsByTagName("p");
+        for (var i = 0; i < paras.length; i++) {
+            var text_text = paras[i].getAttribute("title")
+                //当title属性有值时才弹出消息
+            if (text_text) {
+                alert(text_text);
+            }
+        }
+    </script>
+</body>
+
+</html>

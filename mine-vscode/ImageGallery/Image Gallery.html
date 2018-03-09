@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Image Gallery</title>
+    <script src="ImageGallery.js" type="text/javascript">
+    </script>
+    <link rel="stylesheet" href="ImageGallery.css" type="text/css" />
+
+</head>
+
+<body>
+    <!-- //图片浏览 -->
+    <h1>Snapshot</h1>
+    <ul id="imagegallery">
+        <li>
+            <!-- //return false 阻止默认行为被调用，onclick事件处理函数会认为这个链接没有被点击 -->
+            <a href="img/pic1.jpg" title="picture1">pic 1</a>
+        </li>
+        <li>
+            <a href="img/pic2.jpg" title="picture2">pic 2</a>
+        </li>
+        <li>
+            <a href="img/pic3.jpg" title="picture3">pic 3</a>
+        </li>
+        <li>
+            <a href="img/pic4.jpg" title="picture4">pic4 </a>
+        </li>
+    </ul>
+    <!-- 以下为简单版,版本1 -->
+    <!-- <ul>
+        <li>
+            //return false 阻止默认行为被调用，onclick事件处理函数会认为这个链接没有被点击
+            <a href="img/pic1.jpg" onclick="showPic(this); return false;" title="picture1">pic 1</a>
+        </li>
+        <li>
+            <a href="img/pic2.jpg" onclick="showPic(this);return false;" title="picture2">pic 2</a>
+        </li>
+        <li>
+            <a href="img/pic3.jpg" onclick="showPic(this);return false;" title="picture3">pic 3</a>
+        </li>
+        <li>
+            <a href="img/pic4.jpg" onclick="showPic(this);return false;" title="picture4">pic4 </a>
+        </li>
+    </ul> -->
+    <p id="description">choose an image.</p>
+    <img id="placehold" src="img/pic1.jpg" alt="my image gally" />
+</body>
+
+</html>
