@@ -1,0 +1,43 @@
+html,body{
+    height: 100%;
+    overflow: auto;
+    background-color: #4e4e4e;
+}
+
+#message{
+    position:absolute;
+    top: 100px;
+    width: 80%;
+    height: 600px;
+    background-color: antiquewhite;
+    display: block;
+    visibility: visible;
+}
+#document{
+    position:absolute;
+    top: 100px;
+    width: 80%;
+    height: 600px;
+    background-color:#128921;
+    display: block;
+    visibility: hidden;
+}
+#history{
+    position:absolute;
+    top: 100px;
+    width: 80%;
+    height: 600px;
+    background-color:#1413ff;
+    display: block;
+    visibility: hidden;
+}
+
+.tag{
+    position: absolute;
+    top: 100px;
+    width: 100%;
+    height: 600px;
+    background-color:#e1ffff;
+
+}
+
